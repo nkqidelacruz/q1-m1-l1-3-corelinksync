@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3. CoreLink Sync – Interactive Lesson Discussion</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, #f8f9fa, #e8f5e9);
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      background: linear-gradient(to bottom, #073B3A, #0B6E4F);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header h3 {
+      margin: 0 0 12px 0;
+      font-size: 2.2rem;
+      color: #fff;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+
+    .cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 0 10px;
+    }
+
+    .card {
+      background: white;
+      border: 2px dashed #08A045;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.28s ease;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(8, 160, 69, 0.22);
+      border-color: #073b3a;
+    }
+
+    .card.active {
+      border-style: solid;
+      border-color: #073b3a;
+      background: linear-gradient(to bottom, #ffffff, #f8fff8);
+      box-shadow: 0 10px 24px rgba(8, 160, 69, 0.28);
+    }
+
+    .card h6 {
+      color: #073b3a;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      font-size: 1.35rem;
+      text-align: center;
+    }
+
+    .card p.description {
+      color: #0b6e4f;
+      line-height: 1.55;
+      margin: 0 0 20px 0;
+      font-size: 1.05rem;
+      flex-grow: 1;
+    }
+
+    .extra {
+      display: none;
+      margin-top: 16px;
+      padding: 14px;
+      background: #e8f5e9;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      color: #073b3a;
+      border-left: 4px solid #08A045;
+    }
+
+    .btn {
+      background-color: #08a045;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      width: 85%;
+      margin: 20px auto 0 auto;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #067d38;
+    }
+
+    @media (max-width: 600px) {
+      .header h3 { font-size: 1.8rem; }
+      .header p   { font-size: 1.15rem; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h3><strong>Lesson Discussion</strong></h3>
+    <p><strong>3. CoreLink Sync</strong></p>
+  </div>
+
+  <div class="cards-container">
+
+    <!-- Card 1 -->
+    <div class="card" data-card="1">
+      <h6>3.1 History of Animation</h6>
+      <p class="description">
+        See how animation started with old toys and grew into movies. Learn about the first animated film and big moments like Disney’s Snow White and Pixar’s Toy Story.
+      </p>
+      <div class="extra">
+        Fun fact: The first animated feature film was <strong>Snow White (1937)</strong> by Disney!
+      </div>
+      <a href="https://csed.nephilaweb.com.ph/mod/book/view.php?id=4980&chapterid=5029" class="btn" target="_blank">
+        Trace the Origins
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" data-card="2">
+      <h6>3.2 Trends in Animation</h6>
+      <p class="description">
+        Find out what’s popular now — CGI movies, Netflix shows, VR worlds, and mixing anime styles. See how new tech and streaming are changing animation.
+      </p>
+      <div class="extra">
+        Current trend (2026): <strong>AI-assisted animation tools</strong> are rising fast and already used in many productions.
+      </div>
+      <a href="https://csed.nephilaweb.com.ph/mod/book/view.php?id=4980&chapterid=5030" class="btn" target="_blank">
+        Spot the Trends
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" data-card="3">
+      <h6>3.3 Business Opportunities</h6>
+      <p class="description">
+        Animation is worth billions! Learn about jobs in movies, games, ads, and TikTok. In the Philippines, studios work for Disney and Netflix, lots of chances to earn.
+      </p>
+      <div class="extra">
+        Philippine animation industry: Growing ~15–20% yearly with strong global outsourcing demand.
+      </div>
+      <a href="https://csed.nephilaweb.com.ph/mod/book/view.php?id=4980&chapterid=5031" class="btn" target="_blank">
+        Cash in Frames
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" data-card="4">
+      <h6>3.4 Career Pathways</h6>
+      <p class="description">
+        Discover jobs like Animator, Storyboard Artist, and VFX Specialist. Start with TESDA NC II in the Philippines, then aim for bigger roles like director or producer.
+      </p>
+      <div class="extra">
+        Pro tip: Start building your portfolio early on <strong>Behance</strong>, <strong>ArtStation</strong>, or Instagram.
+      </div>
+      <a href="https://csed.nephilaweb.com.ph/mod/book/view.php?id=4980&chapterid=5032" class="btn" target="_blank">
+        Map Your Career
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    // =============================================
+    //   Your own JavaScript – feel free to expand
+    // =============================================
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        // Click to toggle extra content + active class
+        card.addEventListener('click', (e) => {
+          // Prevent click on link from toggling
+          if (e.target.tagName === 'A') return;
+
+          card.classList.toggle('active');
+          const extra = card.querySelector('.extra');
+          extra.style.display = extra.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Optional: keyboard accessibility (press Enter/Space)
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+
+        // Make cards focusable for keyboard users
+        card.setAttribute('tabindex', '0');
+      });
+
+      // Bonus small interaction: log when user hovers any card (for debugging / proof)
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          console.log(`Hovered over card ${card.dataset.card}`);
+        });
+      });
+
+      // You can add more features here, examples:
+      // - Random fun fact rotation
+      // - Click counter
+      // - Simple animation on first load
+      // - LocalStorage to remember which cards were opened
+
+    });
+  </script>
+
+</body>
+</html>
